@@ -2,13 +2,21 @@
 <head>
 <script type="text/javascript">
 (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
-branch.init('key_live_djlW1f0tG3UpoN3MqoEnipmivueW0iqg');
+branch.init('key_live_djlW1f0tG3UpoN3MqoEnipmivueW0iqg', null, function(err, data) {
+    console.log(data);
+});
 
 branch.banner({
     icon: 'http://assets.matchesfashion.com.s3.amazonaws.com/matches-icon-120x120.png',
     title: 'MATCHESFASHION.COM App',
-    description: 'Modern Luxury Shopping Made Easy'
-}, {});
+    description: 'Modern Luxury Shopping Made Easy',
+    make_new_link: true
+}, {
+    data: {
+        "$og_title": "Test OG Title",
+        "deeplink_text": "Created from Test Page"
+    }  
+});
 </script>
 </head>
 
